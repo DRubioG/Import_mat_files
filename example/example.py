@@ -1,16 +1,3 @@
-# Import_mat_files
- This repository includes the Python function to import a .mat file(Matlab) to Python like it was a Python  variable
-
-# IMPORTANT
-This function only works if it is in the file you want to use. If you want to export a variable, you need to call in a file an rename the variable.
-For a better use copy-paste from this file.
-
-This function creates like Matlab a variable with value if only has one value, and a list if it has more than one value
-
-## First option -> load()
-Like Matlab
-
-``` python
 def load(file, *args):
     '''
     This function loads .mat files to Python like Python variables.
@@ -49,16 +36,8 @@ def load(file, *args):
                 else:
                     globals()[f"{k}"] = mat.get(k).tolist()
 
-load("matlab_file.mat", "first_variable")
-print(first_variable)
-load("matlab_file2")
 
-```
 
-## Second option -> load_var()
-Like Matlab but with the option to watch the variables
-
-``` python
 def load_var(file, printvar='off', *args):
     '''
     This function loads .mat files to Python like Python variables, and print the names of
@@ -104,8 +83,9 @@ def load_var(file, printvar='off', *args):
             if printvar=='on':
                 print(k)
 
-load_var("matlab_file.mat", 'off', "first_variable")
-print(first_variable)
-load_var("matlab_file2", 'on')
 
-```
+
+load("matlab", "A1", "R1")
+print("A1: ", A1)
+print("R1: ", R1)
+load_var("matlab.mat", 'on')
