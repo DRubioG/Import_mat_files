@@ -1,7 +1,7 @@
 # Import_mat_files
  This repository includes the Python function to import a .mat file(Matlab) to Python like it was a Python  variable
 
-# IMPORTANT
+# Watch out
 This function only works if it is in the file you want to use. If you want to export a variable, you need to call in a file an rename the variable.
 For a better use copy-paste from this file.
 
